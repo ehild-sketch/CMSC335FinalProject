@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Results</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Flight Results — <%= airportLabel %> <%= airportCode %> (<%= statusLabel %>)</h1>
+
+    <% if (error) { %>
+        <p><strong>Error:</strong> <%= error %></p>
+    <% } %>
+
+    <% if (flights.length === 0 && !error) { %>
+        <p>No flights found.</p>
+    <% } else if (flights.length > 0) { %>
+        <table border="1">
+            <tr>
+                <th>Flight</th>
+                <th>Airline</th>
+                <th>Departure</th>
+                <th>Departure Time</th>
+                <th>Arrival</th>
+                <th>Arrival Time</th>
+                <th>Status</th>
+            </tr>
+            <% flights.forEach(flight => { %>
+            <tr>
+                <td><%= flight.flightNumber %></td>
+                <td><%= flight.airline %></td>
+                <td><%= flight.departure %></td>
+                <td><%= flight.departureTime %></td>
+                <td><%= flight.arrival %></td>
+                <td><%= flight.arrivalTime %></td>
+                <td><%= flight.status %></td>
+            </tr>
+            <% }) %>
+        </table>
+    <% } %>
+
+    <br>
+    <form action="/saveFlights" method="POST">
+        <fieldset>
+            <label><strong>Username:</strong> <input type="text" name="user" required></label>
+            <input type="hidden" name="flightsData" value="<%- encodeURIComponent(JSON.stringify(flights)) %>">
+        </fieldset>
+        <br>
+        <button type="submit">Save Flights</button>
+    </form>
+
+    <hr>
+    <a href="/">HOME</a>
+</body>
+</html>
