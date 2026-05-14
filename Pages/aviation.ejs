@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Lookup</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Flight Lookup</h1>
+    <form action="/aviationDis" method="POST">
+        <fieldset>
+            <label><strong>Airport Code:</strong> <input type="text" name="airport_code" maxlength="3" placeholder="JFK" required></label><br><br>
+            <label><input type="radio" name="airport_type" value="dep" checked> Departure</label>
+            <label><input type="radio" name="airport_type" value="arr"> Arrival</label><br><br>
+            <label><strong>Flight Status:</strong>
+                <select name="flight_status" required>
+                    <option value="scheduled">Scheduled</option>
+                    <option value="active">Active</option>
+                    <option value="both">Both</option>
+                </select>
+            </label><br><br>
+            <label><strong>Limit (max 100):</strong> <input type="number" name="limit" min="1" max="100" value="10" required></label>
+        </fieldset>
+        <br>
+        <button type="reset">Clear</button>
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+    <a href="/">HOME</a>
+</body>
+</html>

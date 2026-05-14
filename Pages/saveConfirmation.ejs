@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Save Confirmation</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Flights Saved</h1>
+
+    <% if (locals.error) { %>
+        <p>Failed to save flights for <strong><%= user %></strong>.</p>
+    <% } else { %>
+        <p>Added <strong><%= count %></strong> flight(s) for user <strong><%= user %></strong> (<%= total %> total saved).</p>
+    <% } %>
+
+    <hr>
+    <a href="/">HOME</a>
+</body>
+</html>

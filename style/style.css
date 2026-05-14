@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+body {
+    background-color: #dceefb;
+    color: #1a2a3a;
+    font-size: 17px;
+    font-family: "Ubuntu", sans-serif;
+    margin: 2rem;
+    line-height: 1.5;
+}
+
+h1 {
+    color: #0b3d91;
+    font-size: 30px;
+    border-bottom: 3px solid #0b3d91;
+    padding-bottom: 0.5rem;
+}
+
+fieldset {
+    background-color: #ffffff;
+    border: 2px solid #0b3d91;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    color: #1a2a3a;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    background-color: #f8fbff;
+    color: #1a2a3a;
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    border: 1px solid #6b9bd1;
+    padding: 0.35rem 0.5rem;
+    margin-left: 0.25rem;
+}
+
+button {
+    background-color: #0b3d91;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1456c4;
+}
+
+table {
+    background-color: #ffffff;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+th {
+    background-color: #0b3d91;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 0.6rem;
+    text-align: left;
+}
+
+td {
+    color: #1a2a3a;
+    font-size: 15px;
+    padding: 0.5rem;
+    border: 1px solid #9bbce0;
+}
+
+tr:nth-child(even) {
+    background-color: #f0f7ff;
+}
+
+a {
+    color: #0b3d91;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1456c4;
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #9bbce0;
+    margin: 1.5rem 0;
+}
+
+small {
+    color: #4a6278;
+    font-size: 14px;
+}
+
+p {
+    color: #1a2a3a;
+    font-size: 17px;
+}
+
+strong {
+    color: #0b3d91;
+    font-size: 17px;
+}

@@ -1,13 +1,13 @@
 {
   "name": "finalproj",
   "version": "1.0.0",
-  "description": "",
+  "description": "CMSC335 Final Project - Aviation Flight Lookup",
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "Server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node Server.js"
   },
   "dependencies": {
     "dotenv": "^17.4.2",

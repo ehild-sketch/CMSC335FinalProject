@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saved Flights</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Saved Flights for <%= user %></h1>
+
+    <% if (locals.deleted) { %>
+        <p><strong>All saved flights have been deleted.</strong></p>
+    <% } %>
+
+    <% if (flights.length === 0) { %>
+        <p>No saved flights found.</p>
+    <% } else { %>
+        <table border="1">
+            <tr>
+                <th>Flight</th>
+                <th>Airline</th>
+                <th>Departure</th>
+                <th>Departure Time</th>
+                <th>Arrival</th>
+                <th>Arrival Time</th>
+                <th>Status</th>
+            </tr>
+            <% flights.forEach(flight => { %>
+            <tr>
+                <td><%= flight.flightNumber %></td>
+                <td><%= flight.airline %></td>
+                <td><%= flight.departure %></td>
+                <td><%= flight.departureTime || "N/A" %></td>
+                <td><%= flight.arrival %></td>
+                <td><%= flight.arrivalTime || "N/A" %></td>
+                <td><%= flight.status %></td>
+            </tr>
+            <% }) %>
+        </table>
+    <% } %>
+
+    <br>
+    <form action="/user/delete" method="POST">
+        <input type="hidden" name="user" value="<%= user %>">
+        <button type="submit">Delete Saved Flights</button>
+    </form>
+
+    <hr>
+    <a href="/">HOME</a>
+</body>
+</html>
