@@ -4,7 +4,7 @@ Group Members: Evan Hild (ehild), Mahima Kumar (mkumar14), Jessie Gu (jessiegu),
 
 App Description: Allow users to search for active flight data and save that data to an associated username in the database.
 
-YouTube Video Link: 
+YouTube Video Link: https://youtu.be/GyiwVGFOg9M
 
 APIs: AviationStack (https://aviationstack.com/)
 
