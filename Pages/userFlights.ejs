@@ -10,9 +10,11 @@
 
     <% if (locals.deleted) { %>
         <p><strong>All saved flights have been deleted.</strong></p>
-    <% } %>
-
-    <% if (flights.length === 0) { %>
+    <% } else if (locals.loadError) { %>
+        <p class="error-message">Could not load saved flights from the database.</p>
+    <% } else if (locals.deleteError) { %>
+        <p class="error-message">Could not delete saved flights. Check the database connection.</p>
+    <% } else if (flights.length === 0) { %>
         <p>No saved flights found.</p>
     <% } else { %>
         <table border="1">

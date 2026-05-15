@@ -9,7 +9,7 @@
     <h1>Flights Saved</h1>
 
     <% if (locals.error) { %>
-        <p>Failed to save flights for <strong><%= user %></strong>.</p>
+        <p class="error-message"><%= locals.errorMessage || ("Failed to save flights for " + user + ".") %></p>
     <% } else { %>
         <p>Added <strong><%= count %></strong> flight(s) for user <strong><%= user %></strong> (<%= total %> total saved).</p>
     <% } %>

@@ -10,6 +10,6 @@ APIs: AviationStack (https://aviationstack.com/)
 
 Contact Email: 
 
-Deployed App Link: 
+Deployed App Link: https://cmsc335finalproject-37y2.onrender.com/
 
 AI Use: 1. Cursor IDE

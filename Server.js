@@ -28,11 +28,15 @@ app.use("/", aviationRoutes);
 app.use("/user", userRoutes);
 
 async function main() {
-    try {
-        await mongoose.connect(process.env.MONGO_STRING);
-        console.log("Mongo DB connection successful");
-    } catch (e) {
-        console.log(e);
+    if (!process.env.MONGO_STRING) {
+        console.log("Warning: MONGO_STRING is not set. Database features will fail until it is configured.");
+    } else {
+        try {
+            await mongoose.connect(process.env.MONGO_STRING);
+            console.log("Mongo DB connection successful");
+        } catch (e) {
+            console.log(e);
+        }
     }
 
     process.stdin.setEncoding("utf8");

@@ -114,3 +114,9 @@ strong {
     color: #0b3d91;
     font-size: 17px;
 }
+
+.error-message {
+    color: #b00020;
+    font-size: 16px;
+    font-weight: 700;
+}

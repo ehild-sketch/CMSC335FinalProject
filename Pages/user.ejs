@@ -7,6 +7,9 @@
 </head>
 <body>
     <h1>Saved Flights Lookup</h1>
+    <% if (locals.errorMessage) { %>
+        <p class="error-message"><%= errorMessage %></p>
+    <% } %>
     <form action="/user/curr_user" method="POST">
         <fieldset>
             <label><strong>Username:</strong> <input type="text" name="user" required></label>
