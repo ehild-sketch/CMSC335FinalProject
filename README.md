@@ -1,4 +1,4 @@
-Submitted by: 
+Submitted by: Evan Hild (ehild)
 
 Group Members: Evan Hild (ehild), Mahima Kumar (mkumar14), Jessie Gu (jessiegu), John Li (jli31)
 
@@ -8,7 +8,7 @@ YouTube Video Link: https://youtu.be/GyiwVGFOg9M
 
 APIs: AviationStack (https://aviationstack.com/)
 
-Contact Email: 
+Contact Email: ehild@terpmail.umd.edu
 
 Deployed App Link: https://cmsc335finalproject-37y2.onrender.com/
 
